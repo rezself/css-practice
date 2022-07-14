@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&family=Anek+Devanagari:wght@300;400;700&display=swap');
+
+:root {
+    --dark-gray: #333333;
+    --text-gray: #777777;
+    --gray: #494949;
+    --light-gray: #A4A4A4;
+    --extra-light-gray: #F5F5F5;
+    --black: #000;
+    --white: #fff;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Anek Devanagari', sans-serif;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+body::-webkit-scrollbar {
+    width: 8px;
+}
+  
+body::-webkit-scrollbar-track {
+    background: var(--extra-light-gray);
+}
+  
+body::-webkit-scrollbar-thumb {
+    background-color: var(--light-gray);
+    border-radius: 25px;
+}
+
+.aldrich-text {
+    font-family: 'Aldrich', sans-serif;
+}
+
+.navigation {
+    display: flex;
+    position: sticky;
+    z-index: 3;
+    top: 0;
+    padding: 0 2rem;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--dark-gray);
+    color: var(--white);
+}
+
+.navigation__content {
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+}
+
+.navigation a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/*hamburguer menu*/
+.navigation__mobile {
+    width: 30px;
+    height: 30px;
+    display: none;
+    cursor: pointer;
+}
+
+.navigation__mobile span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: var(--white);
+    margin-top: 6px;
+    transform-origin: 0 100%;
+    transition: all 300ms;
+}
+
+.activeline1__navigation {
+    transform: rotate(45deg) translate(-2px, 1px);
+}
+
+.activeline2__navigation {
+    opacity: 0;
+    margin-left: -30px;
+}
+
+.activeline3__navigation {
+    transform: rotate(-45deg) translate(-4px, 2px);
+}
+
+.menu {
+    display: none;
+    transition: all 300ms;
+}
+
+.menu div {
+    margin-bottom: 1rem;
+}
+
+.menu a {
+    font-size: 1.2rem;
+    color: white;
+}
+
+.menu__active {
+    display: block;
+    position: fixed;
+    z-index: 2;
+    height: 100vh;
+    min-height: 120px;
+    width: 260px;
+    padding: 5rem 2rem;
+    box-sizing: border-box;
+    background-color: var(--dark-gray);
+}
+
+.hero {
+    display: flex;
+}
+
+.hero__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 65%;
+    padding: 0 5%;
+    background-color: var(--gray);
+    color: var(--white);
+}
+
+.hero__content-title {
+    margin: 0;
+    font-size: 3rem;
+}
+
+.hero__content-foot {
+    font-size: 1.5rem;
+    margin-top: 0;
+}
+
+.button_light {
+    background-color: var(--white);
+    color: var(--black);
+    text-align: center;
+    width: 10rem;
+    padding: 0.6rem 0;
+    border: 3px var(--black) solid;
+    border-radius: 20px;
+    box-shadow: -2px 4px 3px -2px rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+
+.hero__image {
+    width: 40%;
+    height: 600px;
+    object-fit: cover;
+    object-position: -90px;
+}
+
+.content {
+    padding: 0 10%;
+    font-size: 1.2rem;
+}
+
+.content > div {
+    margin-top: 5rem;
+}
+
+.content-title {
+    font-family: 'Aldrich', sans-serif;
+    font-size: 2rem;
+    color: var(--gray);
+    margin-bottom: 1rem;
+}
+
+.content-divider {
+    height: 5px;
+    width: 66px;
+    background-color: var(--black);
+}
+
+.content__about {
+    color: var(--text-gray);
+}
+
+.content-description {
+    line-height: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-gray);
+}
+
+.content__about-part {
+    display: flex;
+    gap: 30px;
+}
+
+.content__about-part-two {
+    position: relative;
+    z-index: -1;
+    min-height: 140px;
+}
+
+.content__about-part-two__button {
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    font-size: 1rem;
+    width: 13rem;
+}
+
+.price-table {
+    display: flex;
+}
+
+.price-table > div {
+    padding: 2% 5%;
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.price-table ul {
+    margin-bottom: 2.4rem;
+}
+
+.price-table__button {
+    font-size: 1rem;
+    align-self: center;
+}
+
+.price-table__head {
+    text-align: center;
+    height: 150px;
+}
+
+.price-table__head p {
+    margin: 0;
+}
+
+.price-table__free {
+    background-color: var(--extra-light-gray);
+    color: var(--gray);
+    border-radius: 15px 0 0 15px;
+}
+
+.price-table-title {
+    font-size: 2.8rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.price-table__plus {
+    background-color: var(--gray);
+    color: var(--white);
+}
+
+.price-table__business {
+    background-color: var(--black);
+    color: var(--white);
+    border-radius: 0 15px 15px 0;
+}
+
+.content__negocio-button {
+    margin: 2.5rem auto 0 auto;
+    font-size: 1rem;
+}
+
+.content__call-to-action {
+    background-color: var(--extra-light-gray);
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    padding: 2rem 0;
+}
+
+.content__call-to-action > div {
+    padding: 0 10%;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.content__call-to-action__button {
+    width: 14rem;
+}
+
+.clients-table {
+    margin-top: 1.5rem;
+    display: flex;
+}
+
+.clients-table img {
+    width: 25%;
+    height: 100px;
+    object-fit: contain;
+}
+
+.clients-table-maraton {
+    background-color: red;
+}
+
+.clients-table-nike {
+    background-color: var(--black);
+}
+
+.footer {
+    margin-top: 5rem;
+    background-color: var(--dark-gray);
+    height: 30vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer > div {
+    color: var(--white);
+    margin: auto 0;
+}
+
+.footer-title {
+    font-size: 3rem;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.footer-description {
+    font-size: 1.2rem;
+    margin-top: 0;
+    margin-bottom: 2.5rem;
+}
+
+@media screen and (max-width: 700px) {
+    .navigation__content {
+        display: none;
+    }
+
+    .navigation__mobile {
+        display: inline;
+    }
+
+    .content__about-part {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .price-table {
+        flex-direction: column;
+    }
+
+    .price-table > div {
+        width: 93%;
+    }
+
+    .price-table__free {
+        border-radius: 15px 15px 0 0;
+    }
+
+    .price-table__business {
+        border-radius: 0 0 15px 15px;
+    }
+
+    .price-table__button {
+        margin-bottom: 1.5rem;
+    }
+}
