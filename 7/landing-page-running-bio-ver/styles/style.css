@@ -8,8 +8,15 @@
     --extra-light-gray: #F5F5F5;
     --black: #000;
     --white: #fff;
+
+    /*colors*/
+    --background: #cab7b3;
+    --level-1-title: #669374;
+    --level-2-title: #deb69d;
+    --paragraph: #032a18;
 }
 
+/*principal style*/
 body {
     margin: 0;
     padding: 0;
@@ -21,6 +28,7 @@ a {
     text-decoration: none;
 }
 
+/*scrollbar*/
 body::-webkit-scrollbar {
     width: 8px;
 }
@@ -38,6 +46,7 @@ body::-webkit-scrollbar-thumb {
     font-family: 'Aldrich', sans-serif;
 }
 
+/*navbar*/
 .navigation {
     display: flex;
     position: sticky;
@@ -79,6 +88,7 @@ body::-webkit-scrollbar-thumb {
     transition: all 300ms;
 }
 
+/*animation*/
 .activeline1__navigation {
     transform: rotate(45deg) translate(-2px, 1px);
 }
@@ -92,6 +102,7 @@ body::-webkit-scrollbar-thumb {
     transform: rotate(-45deg) translate(-4px, 2px);
 }
 
+/*nav mobile*/
 .menu {
     display: none;
     transition: all 300ms;
@@ -118,6 +129,7 @@ body::-webkit-scrollbar-thumb {
     background-color: var(--dark-gray);
 }
 
+/*hero*/
 .hero {
     display: flex;
 }
@@ -161,6 +173,7 @@ body::-webkit-scrollbar-thumb {
     object-position: -90px;
 }
 
+/*content*/
 .content {
     padding: 0 10%;
     font-size: 1.2rem;
@@ -212,100 +225,29 @@ body::-webkit-scrollbar-thumb {
     width: 13rem;
 }
 
-.price-table {
-    display: flex;
-}
-
-.price-table > div {
-    padding: 2% 5%;
-    width: 33%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.price-table ul {
-    margin-bottom: 2.4rem;
-}
-
-.price-table__button {
-    font-size: 1rem;
-    align-self: center;
-}
-
-.price-table__head {
-    text-align: center;
-    height: 150px;
-}
-
-.price-table__head p {
-    margin: 0;
-}
-
-.price-table__free {
-    background-color: var(--extra-light-gray);
-    color: var(--gray);
-    border-radius: 15px 0 0 15px;
-}
-
-.price-table-title {
-    font-size: 2.8rem;
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-}
-
-.price-table__plus {
-    background-color: var(--gray);
-    color: var(--white);
-}
-
-.price-table__business {
-    background-color: var(--black);
-    color: var(--white);
-    border-radius: 0 15px 15px 0;
-}
-
-.content__negocio-button {
+.content__news-button {
     margin: 2.5rem auto 0 auto;
     font-size: 1rem;
 }
 
-.content__call-to-action {
-    background-color: var(--extra-light-gray);
-    width: 100vw;
-    margin-left: calc(50% - 50vw);
-    padding: 2rem 0;
+.news {
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr;
+    gap: 20px 30px;
+    margin-top: 15px;
 }
 
-.content__call-to-action > div {
-    padding: 0 10%;
-    font-size: 1.2rem;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.article {
+    box-sizing: border-box;
+    padding: 5%;
+    border-radius: 10px;
+    border: 1px var(--level-1-title) solid;
 }
 
-.content__call-to-action__button {
-    width: 14rem;
-}
-
-.clients-table {
-    margin-top: 1.5rem;
-    display: flex;
-}
-
-.clients-table img {
-    width: 25%;
-    height: 100px;
-    object-fit: contain;
-}
-
-.clients-table-maraton {
-    background-color: red;
-}
-
-.clients-table-nike {
-    background-color: var(--black);
+.article-image {
+    max-width: 100%;
+    border-radius: 10px;
 }
 
 .footer {
@@ -328,10 +270,14 @@ body::-webkit-scrollbar-thumb {
     margin-bottom: 0;
 }
 
-.footer-description {
-    font-size: 1.2rem;
-    margin-top: 0;
-    margin-bottom: 2.5rem;
+.social-media {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.social-media a {
+    color: var(--white);
 }
 
 @media screen and (max-width: 700px) {
@@ -347,24 +293,14 @@ body::-webkit-scrollbar-thumb {
         flex-direction: column;
         gap: 0;
     }
-    
-    .price-table {
-        flex-direction: column;
-    }
-
-    .price-table > div {
-        width: 93%;
-    }
-
-    .price-table__free {
-        border-radius: 15px 15px 0 0;
-    }
-
-    .price-table__business {
-        border-radius: 0 0 15px 15px;
-    }
 
     .price-table__button {
         margin-bottom: 1.5rem;
+    }
+
+    .news {
+        grid-template-columns: 1fr; 
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        gap: 20px 0;
     }
 }
